@@ -10,6 +10,10 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Identity Reconciliation API is running 🚀");
+});
+
 app.use("/identify", identifyRoutes);
 
 module.exports = app;
